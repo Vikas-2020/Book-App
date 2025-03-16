@@ -138,7 +138,7 @@ function showDetails(obj) {
 }
 
 // Close Popup when clicking ❌ button
-document.querySelector(".close-btn").addEventListener("click", () => {
+document.querySelector(".popup-content .close-btn").addEventListener("click", () => {
     document.querySelector(".popup").style.display = "none";
 });
 
