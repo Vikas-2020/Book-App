@@ -5,8 +5,12 @@
 
 body{
     transition: all 0.4s ease-in-out;
-    margin: 0 50px;
+    /* margin: 0 50px; */
 } 
+
+#wrapper{
+    margin: 0 50px;
+}
 
 header{
     border: 1px solid rgb(8, 8, 8);
@@ -770,10 +774,10 @@ header{
 /*media query*/
 @media screen and (max-width:1200px) {
     body{
-        margin: 0 10px;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
     }
     #wrapper{
         width: 768px;
@@ -781,6 +785,8 @@ header{
 
     .main-wrapper section{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .main-wrapper section aside{
@@ -797,6 +803,10 @@ header{
 
     .main{
         width: 100%;
+    }
+
+    .footer-sec{
+        width: 100vw;
     }
 }
 
@@ -839,6 +849,7 @@ header{
     }
     .book{
         width: 95%;
+        height: 470px;
     }
 }
 
@@ -855,3 +866,127 @@ header{
 }
 
 
+/* For large screens (1200px and below) */
+@media screen and (max-width: 1200px) {
+    .popup-content {
+        width: 60%;
+        padding: 2rem;
+    }
+}
+
+/* For tablets (768px and below) */
+@media screen and (max-width: 768px) {
+    .popup-content {
+        padding: 1.5rem; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #popup-image {
+        width: 40%;
+        height: auto;
+    }
+
+    #popup-title {
+        font-size: 12px;
+    }
+
+    #popup-description {
+        font-size: 10px;
+    }
+
+    .popup-footer {
+        width: 90%;
+    }
+    .heading{
+        font-size: 1.5rem;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width:625px) {
+    .popup-content {
+        width: 70%;
+    }
+    .buy-links a{
+        font-size: 1.2rem;
+    }
+    .popup-footer{
+        width: 60%;
+    }
+    #add-to-list{
+        padding: 8px 0;
+        font-size: 14px;
+    }
+}
+/* For mobile devices (480px and below) */
+@media screen and (max-width: 480px) {
+    .popup-content {
+        width: 70%;
+        padding: 1rem;
+        height: 90vh;
+    }
+
+    .popup-body{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #popup-image {
+        width: 40%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    #popup-title {
+        font-size: 18px;
+    }
+
+    #popup-author,
+    #popup-description {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+    .buy-links {
+        flex-direction: row;
+        margin: 5px 0;
+    }
+
+    .popup-footer{
+        width: 80%;
+    }
+    #add-to-list{
+        padding: 8px 0;
+        font-size: 14px;
+    }
+
+    .footer-sec div{
+        width: 80%;
+    }
+}
+
+/*footer*/
+.footer-sec{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 29px 0;
+    position: sticky;
+    box-shadow: 0 2px 8px rgba(95, 65, 175, .5), inset 0 1px rgba(255, 255, 255, .3), inset 0 10px rgba(255, 255, 255, .2), inset 0 10px 20px rgba(255, 255, 255, .25), inset 0 -15px 30px rgba(126, 53, 211, .3);
+    color: #4f2ee8;
+    margin-top: 3rem;
+}
+
+@media screen and (max-width:672px) {
+    .footer-sec div{
+        width: 60%;
+    }
+    .footer-sec{
+        padding: 10px 0;
+    }
+}
