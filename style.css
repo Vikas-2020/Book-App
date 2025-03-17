@@ -926,7 +926,7 @@ header{
     .popup-content {
         width: 70%;
         padding: 1rem;
-        height: 470px;
+        height: auto;
     }
 
     .popup-body{
