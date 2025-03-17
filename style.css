@@ -990,3 +990,29 @@ header{
         padding: 10px 0;
     }
 }
+
+.btn-up {
+    width: 54px;
+    height: 54px;
+    cursor: pointer;
+    opacity: 1;
+    background-color: rgba(79,46,232,.7);
+    border: 5px solid rgba(0,0,0,0);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: border .2s ease-in-out,opacity .5s ease-in-out;
+    display: flex;
+    position: fixed;
+    bottom: 70px;
+    right: 0;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+}
+.btn-up:hover {
+    border: 5px solid rgba(0, 0, 0, 0.3); /* Add a subtle border */
+    opacity: 0.9; /* Slightly increase opacity */
+    background-color: rgba(79, 46, 232, 0.9); /* Make the background more solid */
+    transform: translate(-50%, -50%) scale(1.1); /* Add a slight zoom effect */
+    transition: border 0.2s ease-in-out, opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
+}

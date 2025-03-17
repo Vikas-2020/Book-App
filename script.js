@@ -419,3 +419,27 @@ function logout() {
 
 // Check if user is already logged in
 document.addEventListener("DOMContentLoaded", updateUI);
+
+//button up
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollBtn = document.querySelector(".btn-up");
+
+  // Hide button initially
+  scrollBtn.style.display = "none";
+
+  window.addEventListener("scroll", function () {
+      if (window.scrollY > 200) {
+          scrollBtn.style.display = "flex"; // Show the button
+      } else {
+          scrollBtn.style.display = "none"; // Hide the button
+      }
+  });
+
+  // Scroll to top when clicked
+  scrollBtn.addEventListener("click", function () {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth" // Smooth scrolling effect
+      });
+  });
+});
